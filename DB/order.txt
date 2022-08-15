@@ -22,13 +22,13 @@ create table order.products(
 );
 
 create table order.type(
-    type_id int NOT NULL,
+    type_id int NOT NULL auto_increment,
     name nvarchar(20),
     PRIMARY KEY(type_id)
 );
 
 create table status(
-    status_id TINYINT NOT NULL,
+    status_id TINYINT NOT NULL auto_increment,
     status nvarchar(10),
     PRIMARY KEY(status_id)
 );

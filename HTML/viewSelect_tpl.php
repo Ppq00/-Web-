@@ -15,6 +15,7 @@
 <p>
     <form action = "search.php" method="get">
         <label for="products">商品検索</label>
+        <input type="hidden" name="user_id" value="<?php echo $user_ID; ?>">
         <input type="search" name="products_name" placeholder="キーワード"/>
         <input type="submit", name="submitBtn", value="検索" class="button1">
     </form>

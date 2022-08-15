@@ -1,5 +1,6 @@
 <?php
     $textbox = $_GET["products_name"];
+    $user_ID = $_GET["user_id"];
 
 
 try{
@@ -27,20 +28,9 @@ try{
     $stmt->execute();
 
     $result = $stmt->fetchAll();
-    if(empty($result)){
-        echo '該当するデータがありません';
-
-    }else{
-        foreach($result as $row){
-            echo '<p>';
-            echo $row["name"];
-            echo ', \\';
-            echo $row["price"];
-            echo ', タイプ';
-            echo $row["type"];
-            echo '</p>';
-        }
-    }
+    require_once 'search2.php';
+    
+    
 
   } catch (PDDException $e) {
       require_once 'exception_tp1.php';
