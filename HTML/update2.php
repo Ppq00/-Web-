@@ -6,6 +6,7 @@
     <title></title>
     <style>
     body{
+     background-color: aquamarine;
      width: 500px;
    padding: 40px 10px;
    position: absolute;

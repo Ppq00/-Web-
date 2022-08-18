@@ -5,6 +5,10 @@
 
     <title></title>
     <style>
+        body{
+     background-color: aquamarine;
+     
+   }
         </style>
     
 </head>

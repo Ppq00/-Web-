@@ -6,6 +6,7 @@
     <title></title>
     <style>
     body{
+     background-color: aquamarine;
      width: 500px;
    padding: 40px 10px;
    position: absolute;
@@ -24,21 +25,24 @@
 if(empty($result)){
         echo '該当するデータがありません';
 
-    }else{
+    }else
+        $count = 0;
+        echo '検索結果';
         foreach($result as $row){
-            echo '<p>';
+            $count += 1;
+            echo'<p>';
+            echo $count;
+            echo ',  ';
             echo $row["name"];
-            echo ', \\';
+            echo ',  \\';
             echo $row["price"];
-            echo ', タイプ';
-            echo $row["type"];
             echo '</p>';
-        }
-    }
+        
+    
 ?>
 
 
-<form action = "update.php" mechod="get">
+    <form action = "update.php" mechod="get">
         <input type="hidden" name="products_id" value="<?php echo $row['products_id']; ?>">
         <input type="hidden" name="user_id" value="<?php echo $user_ID; ?>">
         <input type="hidden" name="start" value="0">
@@ -58,6 +62,7 @@ if(empty($result)){
     </form>
 
 <?php   
+}
     
 
     ?>
