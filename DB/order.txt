@@ -32,3 +32,48 @@ create table status(
     status nvarchar(10),
     PRIMARY KEY(status_id)
 );
+
+
+
+
+load data local
+    infile 'user.csv'
+into table
+    order.users
+fields
+    terminated by ','
+    enclosed by "'"
+;
+
+
+
+
+load data local
+    infile 'product.csv'
+into table
+    order.products
+fields
+    terminated by ','
+    enclosed by "'"
+;
+
+
+
+load data local
+    infile 'status.csv'
+into table
+    status
+fields
+    terminated by ','
+    enclosed by "'"
+;
+
+
+load data local
+    infile 'type.csv'
+into table
+    order.type
+fields
+    terminated by ','
+    enclosed by "'"
+ ;
